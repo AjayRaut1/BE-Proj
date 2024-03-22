@@ -40,13 +40,6 @@ with open('data/rois.csv', 'r', newline='') as inf:
 # converting the values to integer
 rois = [[int(float(j)) for j in i] for i in rois]
 
-# creating the parameters window with trackbars
-cv2.namedWindow('parameters')
-cv2.createTrackbar('Threshold1', 'parameters', 186, 700, callback)
-cv2.createTrackbar('Threshold2', 'parameters', 122, 700, callback)
-cv2.createTrackbar('Min pixels', 'parameters', 100, 1500, callback)
-cv2.createTrackbar('Max pixels', 'parameters', 323, 1500, callback)
-
 # select the video source; 0 - integrated webcam; 1 - external webcam;
 VIDEO_SOURCE = 0
 cap = cv2.VideoCapture(VIDEO_SOURCE)
