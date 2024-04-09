@@ -1,7 +1,7 @@
 # importing everything we need
 import cv2
 import csv
-
+import streamlit
 
 # declaring a static variable
 class spots:
